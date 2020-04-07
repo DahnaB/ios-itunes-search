@@ -56,7 +56,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="gCD-5m-4GH" detailTextLabel="8gi-ix-kuQ" style="IBUITableViewCellStyleSubtitle" id="jdZ-5g-igt">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" textLabel="gCD-5m-4GH" detailTextLabel="8gi-ix-kuQ" style="IBUITableViewCellStyleSubtitle" id="jdZ-5g-igt">
                                 <rect key="frame" x="0.0" y="113" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jdZ-5g-igt" id="cON-mc-gen">
@@ -83,7 +83,7 @@
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="ewc-44-oyC" id="3h2-Gy-USG"/>
-                            <outlet property="delegate" destination="ewc-44-oyC" id="iN4-lv-9ZY"/>
+                            <outlet property="delegate" destination="ewc-44-oyC" id="rfD-vH-cGm"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="iTunes Search" id="ZKC-fG-JvQ"/>

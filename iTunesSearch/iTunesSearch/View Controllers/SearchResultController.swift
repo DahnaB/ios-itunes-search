@@ -65,5 +65,8 @@ final class SearchResultController {
                 completion(error)
             }
         }
+        
+        task?.resume()
+        
     }
 }
