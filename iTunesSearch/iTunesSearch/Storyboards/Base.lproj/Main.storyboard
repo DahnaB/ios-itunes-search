@@ -9,14 +9,55 @@
         <!--iTunes Search-->
         <scene sceneID="Uyd-3g-agU">
             <objects>
-                <tableViewController id="ewc-44-oyC" sceneMemberID="viewController">
+                <tableViewController id="ewc-44-oyC" customClass="SearchResultsTableViewController" customModule="iTunesSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AXx-Rb-NJt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="4ck-U7-Clg">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="iSL-xR-vxM">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                    <subviews>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I2c-eW-ug1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="31" id="MGR-Bw-uQQ"/>
+                                            </constraints>
+                                            <segments>
+                                                <segment title="Apps"/>
+                                                <segment title="Music"/>
+                                                <segment title="Movies"/>
+                                            </segments>
+                                        </segmentedControl>
+                                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="EjS-BY-NLY">
+                                            <rect key="frame" x="0.0" y="31" width="414" height="54"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EjS-BY-NLY" firstAttribute="top" secondItem="I2c-eW-ug1" secondAttribute="bottom" id="Avx-rc-Cyz"/>
+                                        <constraint firstAttribute="trailing" secondItem="EjS-BY-NLY" secondAttribute="trailing" id="RYP-KK-oEg"/>
+                                        <constraint firstItem="I2c-eW-ug1" firstAttribute="leading" secondItem="iSL-xR-vxM" secondAttribute="leading" id="T0r-p4-zXd"/>
+                                        <constraint firstItem="EjS-BY-NLY" firstAttribute="top" secondItem="I2c-eW-ug1" secondAttribute="bottom" id="TZs-gC-qQz"/>
+                                        <constraint firstItem="EjS-BY-NLY" firstAttribute="leading" secondItem="iSL-xR-vxM" secondAttribute="leading" id="YYG-Vm-Wz5"/>
+                                        <constraint firstAttribute="trailing" secondItem="I2c-eW-ug1" secondAttribute="trailing" id="ogz-Yr-J2l"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="iSL-xR-vxM" firstAttribute="leading" secondItem="4ck-U7-Clg" secondAttribute="leading" id="DJQ-mI-3Eu"/>
+                                <constraint firstAttribute="bottom" secondItem="iSL-xR-vxM" secondAttribute="bottom" id="MdF-Kg-3I0"/>
+                                <constraint firstItem="iSL-xR-vxM" firstAttribute="top" secondItem="4ck-U7-Clg" secondAttribute="top" id="TH1-pz-sft"/>
+                                <constraint firstAttribute="trailing" secondItem="iSL-xR-vxM" secondAttribute="trailing" id="biM-22-SHT"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="gCD-5m-4GH" detailTextLabel="8gi-ix-kuQ" style="IBUITableViewCellStyleSubtitle" id="jdZ-5g-igt">
-                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <rect key="frame" x="0.0" y="113" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jdZ-5g-igt" id="cON-mc-gen">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
@@ -46,6 +87,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="iTunes Search" id="ZKC-fG-JvQ"/>
+                    <connections>
+                        <outlet property="searchBar" destination="EjS-BY-NLY" id="3rb-zT-w1B"/>
+                        <outlet property="segmentedControl" destination="I2c-eW-ug1" id="Ni9-b9-bPo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LBQ-Y4-HxH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

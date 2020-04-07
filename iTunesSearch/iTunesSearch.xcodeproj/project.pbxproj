@@ -15,6 +15,7 @@
 		9957DC5E243BC32800955296 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9957DC5D243BC32800955296 /* SearchResult.swift */; };
 		9957DC60243BC54B00955296 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9957DC5F243BC54B00955296 /* ResultType.swift */; };
 		9957DC62243BC61300955296 /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9957DC61243BC61300955296 /* SearchResultController.swift */; };
+		9957DC66243C028300955296 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9957DC65243C028300955296 /* SearchResultsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9957DC5D243BC32800955296 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		9957DC5F243BC54B00955296 /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		9957DC61243BC61300955296 /* SearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResultController.swift; path = "iTunesSearch/View Controllers/SearchResultController.swift"; sourceTree = SOURCE_ROOT; };
+		9957DC65243C028300955296 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		9957DC5A243BC27A00955296 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9957DC65243C028300955296 /* SearchResultsTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				9957DC60243BC54B00955296 /* ResultType.swift in Sources */,
 				9942B0C0243BB2820082D4EB /* AppDelegate.swift in Sources */,
+				9957DC66243C028300955296 /* SearchResultsTableViewController.swift in Sources */,
 				9957DC5E243BC32800955296 /* SearchResult.swift in Sources */,
 				9942B0C2243BB2820082D4EB /* SceneDelegate.swift in Sources */,
 				9957DC62243BC61300955296 /* SearchResultController.swift in Sources */,
